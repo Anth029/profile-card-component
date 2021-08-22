@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: 400;
+  color: var(--dark-gray);
+  text-align: center;
+  background-color: var(--dark-cyan);
+  background-image: url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: left -30vw top -50vh, 50vw 50vh;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 1em;
+  width: 300px;
+  height: 350px;
+  position: relative;
+}
+
+.card__bg {
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
+  max-width: 100%;
+}
+
+.card__photo,
+.card__name,
+.card__age,
+.card__city {
+  position: absolute;
+  left: 50%;
+}
+
+.card__photo {
+  width: 96px;
+  height: 96px;
+  transform: translateX(-50%);
+  top: 72px;
+  padding: 4px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.card__name {
+  top: 50%;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--very-dark-desaturated-blue);
+  transform: translateX(-64%);
+}
+
+.card__age {
+  font-size: 18px;
+  top: 48.5%;
+  transform: translateX(220%);
+}
+
+.card__city {
+  top: 57%;
+  transform: translateX(-50%);
+}
+
+.card__footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid hsl(185, 100%, 0%, .1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 1.6em 0;
+}
+
+.card__footer__item {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 6px;
+  font-size: 11px;
+}
+
+.card__footer__item span:last-child {
+  color: var(--very-dark-desaturated-blue);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
